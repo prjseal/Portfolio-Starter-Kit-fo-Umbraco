@@ -1,0 +1,16 @@
+@inherits UmbracoViewPage<SkillsViewModel>
+@using Portfolio.Core.Models.ViewModels
+
+<div class="skills portfolio-info-card">
+    <h2>@Model.SkillsControls.SkillsTitle</h2>
+    @if (Model.SkillsControls.Skills != null && Model.SkillsControls.Skills.Any())
+    {
+        foreach (var item in Model.SkillsControls.Skills)
+        {
+            <h3>@item.Skill</h3>
+            <div class="progress">
+                <div class="progress-bar" aria-valuenow="@(item.Rating)" aria-valuemin="0" aria-valuemax="100" style="width: @(item.Rating)%;"><span class="sr-only">@(item.Rating)%</span></div>
+            </div>
+        }
+    }
+</div>

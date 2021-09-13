@@ -1,0 +1,25 @@
+@inherits UmbracoViewPage<ContactInfoViewModel>
+@using Portfolio.Core.Models.ViewModels
+
+<div class="contact-info portfolio-info-card">
+    <h2>@Model.ContactInfoControls.ContactInfoTitle</h2>
+    @if (Model.ContactInfoControls.ContactInfo != null && Model.ContactInfoControls.ContactInfo.Any())
+    {
+        foreach (var item in Model.ContactInfoControls.ContactInfo)
+        {
+            <div class="row">
+                <div class="col-1"><i class="icon ion-@(item.Value<string>("icon")) icon"></i></div>
+                @if (item is ContentModels.IconLinkItem)
+                {
+                    var linkItem = item as ContentModels.IconLinkItem;
+                    <div class="col-9"><span><a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target">@linkItem.Link.Name</a></span></div>
+                }
+                else if (item is ContentModels.IconTextItem)
+                {
+                    <div class="col-9"><span>@(item.Value<string>("text"))</span></div>
+                }
+            </div>
+        }
+    }
+
+</div>

@@ -1,0 +1,11 @@
+@inherits UmbracoViewPage<ContactViewModel>
+
+@using Portfolio.Core.Models.ViewModels
+
+<form id="contact" method="post" asp-action="Submit" asp-controller="ContactSurface">
+    <div class="form-group"><label for="name">Your Name</label><input class="form-control item" type="text" id="name"></div>
+    <div class="form-group"><label for="subject">Subject</label><input class="form-control item" type="text" id="subject"></div>
+    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div>
+    <div class="form-group"><label for="message">Message</label><textarea class="form-control item" id="message"></textarea></div>
+    <div class="form-group"><button class="btn btn-primary btn-block btn-lg" type="submit">Submit Form</button></div>
+</form>

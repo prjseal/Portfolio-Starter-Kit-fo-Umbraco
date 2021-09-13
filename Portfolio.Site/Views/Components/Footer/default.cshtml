@@ -1,0 +1,34 @@
+@inherits UmbracoViewPage<FooterViewModel>
+
+@using Portfolio.Core.Models.ViewModels
+
+@if (Model.FooterControls != null)
+{
+    <footer class="page-footer">
+        <div class="container">
+            @if (Model.FooterControls.FooterContentLinks != null && Model.FooterControls.FooterContentLinks.Any())
+            {
+                <div class="links">
+                    @foreach (var item in Model.FooterControls.FooterContentLinks)
+                    {
+                        <a href="@item.Url" target="@item.Target">@item.Name</a>
+                    }
+                </div>
+            }
+
+            @if (Model.FooterControls.FooterSocialLinks != null && Model.FooterControls.FooterSocialLinks.Any())
+            {
+                <div class="social-icons">
+                    @foreach (var item in Model.FooterControls.FooterSocialLinks)
+                    {
+                        @if (item is ContentModels.IconLinkItem)
+                        {
+                            var linkItem = item as ContentModels.IconLinkItem;
+                            <a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target"><i class="icon @(item.Value<string>("icon"))"></i></a>
+                        }
+                    }
+                </div>
+            }
+        </div>
+    </footer>
+}

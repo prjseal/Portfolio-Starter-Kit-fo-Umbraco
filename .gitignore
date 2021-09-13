@@ -1,0 +1,7 @@
+/.vs/Portfolio
+/Portfolio.Site/bin/Debug/net5.0
+/Portfolio.Site/obj
+/Portfolio.Site/umbraco
+/Portfolio.Site/wwwroot/umbraco
+/Portfolio.Core/obj
+/Portfolio.Core/bin
