@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.Core.Models;
 using Umbraco.Extensions;
 
@@ -9,7 +10,7 @@ namespace Portfolio.Core.Components
     {
         public IViewComponentResult Invoke(ProjectList projectList)
         {
-            var projects = projectList != null ? projectList.Children<Project>() : null;
+            var projects = projectList != null ? projectList.Children<Project>() : Enumerable.Empty<Project>();
 
             return View(projects);
         }

@@ -1,4 +1,5 @@
 @inherits UmbracoViewPage<IEnumerable<ContentModels.Project>>
+@using Portfolio.Core.Extensions
 
 @if (Model != null && Model.Any())
 {
@@ -9,7 +10,7 @@
                 {
                     <div class="col-md-6 col-lg-4 item zoom-on-hover">
                         <a href="@project.Url()">
-                            <img class="img-fluid image" src="@project.MainImage.Url()">
+                            <img class="img-fluid image" src="@project.MainImage.Url()" alt="@project.MainImage.GetAltText()">
                         </a>
                     </div>
                 }
