@@ -5,3 +5,4 @@
 /Portfolio.Site/wwwroot/umbraco
 /Portfolio.Core/obj
 /Portfolio.Core/bin
+*.user

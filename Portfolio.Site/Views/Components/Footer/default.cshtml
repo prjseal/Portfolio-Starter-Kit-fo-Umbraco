@@ -24,7 +24,7 @@
                         @if (item is ContentModels.IconLinkItem)
                         {
                             var linkItem = item as ContentModels.IconLinkItem;
-                            <a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target"><i class="icon @(item.Value<string>("icon"))"></i></a>
+                            <a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target"><i class="icon ion-@(item.Value<string>("icon").ToLower().Replace(" ","-"))"></i></a>
                         }
                     }
                 </div>
