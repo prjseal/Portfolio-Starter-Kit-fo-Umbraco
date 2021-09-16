@@ -10,7 +10,7 @@ namespace Portfolio.Core.Components
     {
         public IViewComponentResult Invoke(ProjectList projectList)
         {
-            var projects = projectList != null ? projectList.Children<Project>() : Enumerable.Empty<Project>();
+            var projects = projectList != null ? projectList.Children<Project>().Where(x => x.IsVisible()) : Enumerable.Empty<Project>();
 
             return View(projects);
         }

@@ -13,7 +13,7 @@ namespace Portfolio.Core.Components
         public IViewComponentResult Invoke(IPublishedContent model)
         {
             var homePage = model.AncestorOrSelf<Home>();
-            var pages = homePage?.Children() ?? Enumerable.Empty<IPublishedContent>();
+            var pages = homePage?.Children().Where(x => x.IsVisible()) ?? Enumerable.Empty<IPublishedContent>();
 
             var vm = new TopNavigationViewModel()
             {

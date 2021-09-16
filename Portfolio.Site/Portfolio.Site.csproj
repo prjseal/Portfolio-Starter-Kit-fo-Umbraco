@@ -28,6 +28,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Portfolio.Core\Portfolio.Core.csproj" />
+      <ProjectReference Include="..\Portfolio.Models\Portfolio.Models.csproj" />
     </ItemGroup>
 
     <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->

@@ -32,9 +32,9 @@ namespace Portfolio.Core.Extensions
 
         public static string GetPageTitle(this IPublishedContent content)
         {
-            if (content != null && content.HasProperty("pageTitle") && content.HasValue("pageTitle"))
+            if (content != null && content.HasProperty("title") && content.HasValue("title"))
             {
-                return content.Value<string>("pageTitle");
+                return content.Value<string>("title");
             }
 
             return content.Name;

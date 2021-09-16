@@ -71,14 +71,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
 
 		///<summary>
-		/// Hide From Sitemap
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
-		[ImplementPropertyType("hideFromSitemap")]
-		public virtual bool HideFromSitemap => global::Umbraco.Cms.Web.Common.PublishedModels.VisibilityControls.GetHideFromSitemap(this, _publishedValueFallback);
-
-		///<summary>
-		/// Umbraco Navi Hide
+		/// Hide: Set this to true if you want to hide this page from the navigation
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("umbracoNaviHide")]
@@ -141,7 +134,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string SkillsTitle => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetSkillsTitle(this, _publishedValueFallback);
 
 		///<summary>
-		/// Work History
+		/// Work History: Enter the details of the places you have worked at
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("workHistory")]

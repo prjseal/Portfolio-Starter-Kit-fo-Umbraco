@@ -4,7 +4,7 @@
 
 @{
     Layout = "Master.cshtml";
-    var projects = Model.Children<ContentModels.Project>();
+    var projects = Model.Children<ContentModels.Project>().Where(x => x.IsVisible());
 }
 
 <main class="page projets-page">

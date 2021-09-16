@@ -6,3 +6,5 @@
 /Portfolio.Core/obj
 /Portfolio.Core/bin
 *.user
+/Portfolio.Models/bin/Debug/net5.0
+/Portfolio.Models/obj

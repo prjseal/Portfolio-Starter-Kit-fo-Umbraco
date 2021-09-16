@@ -57,21 +57,21 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string Title => global::Umbraco.Cms.Web.Common.PublishedModels.MainHeaderControls.GetTitle(this, _publishedValueFallback);
 
 		///<summary>
-		/// Main Image
+		/// Main Image: Choose a main image for this page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("mainImage")]
 		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent MainImage => global::Umbraco.Cms.Web.Common.PublishedModels.MainImageSettings.GetMainImage(this, _publishedValueFallback);
 
 		///<summary>
-		/// Description
+		/// Description: Enter a description for this project
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("description")]
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Description => global::Umbraco.Cms.Web.Common.PublishedModels.ProjectControls.GetDescription(this, _publishedValueFallback);
 
 		///<summary>
-		/// Project Date
+		/// Project Date: Enter a date for this project
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("projectDate")]
@@ -99,14 +99,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
 
 		///<summary>
-		/// Hide From Sitemap
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
-		[ImplementPropertyType("hideFromSitemap")]
-		public virtual bool HideFromSitemap => global::Umbraco.Cms.Web.Common.PublishedModels.VisibilityControls.GetHideFromSitemap(this, _publishedValueFallback);
-
-		///<summary>
-		/// Umbraco Navi Hide
+		/// Hide: Set this to true if you want to hide this page from the navigation
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("umbracoNaviHide")]

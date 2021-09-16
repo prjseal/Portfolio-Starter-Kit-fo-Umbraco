@@ -209,7 +209,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public static string GetSkillsTitle(IWorkHistoryControls that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "skillsTitle");
 
 		///<summary>
-		/// Work History
+		/// Work History: Enter the details of the places you have worked at
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
