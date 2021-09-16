@@ -16,7 +16,7 @@ using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
 
-namespace Portfolio.Core.Models
+namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
@@ -54,62 +54,62 @@ namespace Portfolio.Core.Models
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("footerContentLinks")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> FooterContentLinks => global::Portfolio.Core.Models.FooterControls.GetFooterContentLinks(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> FooterContentLinks => global::Umbraco.Cms.Web.Common.PublishedModels.FooterControls.GetFooterContentLinks(this, _publishedValueFallback);
 
 		///<summary>
 		/// Footer Social Links
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("footerSocialLinks")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement> FooterSocialLinks => global::Portfolio.Core.Models.FooterControls.GetFooterSocialLinks(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement> FooterSocialLinks => global::Umbraco.Cms.Web.Common.PublishedModels.FooterControls.GetFooterSocialLinks(this, _publishedValueFallback);
 
 		///<summary>
 		/// Main Content: Add the different content rows using the block list editor
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("mainContent")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel MainContent => global::Portfolio.Core.Models.MainContentProperties.GetMainContent(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel MainContent => global::Umbraco.Cms.Web.Common.PublishedModels.MainContentProperties.GetMainContent(this, _publishedValueFallback);
 
 		///<summary>
 		/// About Me
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("aboutMe")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString AboutMe => global::Portfolio.Core.Models.ProfileControls.GetAboutMe(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString AboutMe => global::Umbraco.Cms.Web.Common.PublishedModels.ProfileControls.GetAboutMe(this, _publishedValueFallback);
 
 		///<summary>
 		/// Avatar
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("avatar")]
-		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent Avatar => global::Portfolio.Core.Models.ProfileControls.GetAvatar(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent Avatar => global::Umbraco.Cms.Web.Common.PublishedModels.ProfileControls.GetAvatar(this, _publishedValueFallback);
 
 		///<summary>
 		/// Profile Link
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("profileLink")]
-		public virtual global::Umbraco.Cms.Core.Models.Link ProfileLink => global::Portfolio.Core.Models.ProfileControls.GetProfileLink(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.Models.Link ProfileLink => global::Umbraco.Cms.Web.Common.PublishedModels.ProfileControls.GetProfileLink(this, _publishedValueFallback);
 
 		///<summary>
 		/// Canonical Url: Enter the canonical url for this page. If it is empty, the url of the page will be used instead.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("canonicalUrl")]
-		public virtual string CanonicalUrl => global::Portfolio.Core.Models.SEocontrols.GetCanonicalUrl(this, _publishedValueFallback);
+		public virtual string CanonicalUrl => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetCanonicalUrl(this, _publishedValueFallback);
 
 		///<summary>
 		/// Meta Description: Enter the meta description for the page. This is what will show in search engine results.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("metaDescription")]
-		public virtual string MetaDescription => global::Portfolio.Core.Models.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
+		public virtual string MetaDescription => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
 
 		///<summary>
 		/// Meta Title: Enter the title for the page. If this is blank, we will use page title. If that is blank we will use page name.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("metaTitle")]
-		public virtual string MetaTitle => global::Portfolio.Core.Models.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
+		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Portfolio.Core.Models;
+using Umbraco.Cms.Web.Common.PublishedModels;
 using Portfolio.Core.Models.ViewModels;
 
 namespace Portfolio.Core.Components

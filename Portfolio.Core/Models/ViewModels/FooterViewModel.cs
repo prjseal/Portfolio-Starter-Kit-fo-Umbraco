@@ -1,4 +1,6 @@
-﻿namespace Portfolio.Core.Models.ViewModels
+﻿using Umbraco.Cms.Web.Common.PublishedModels;
+
+namespace Portfolio.Core.Models.ViewModels
 {
     public class FooterViewModel
     {

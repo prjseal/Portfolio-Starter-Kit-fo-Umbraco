@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Portfolio.Core.Models.ViewModels;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Extensions;
+using Umbraco.Cms.Web.Common.PublishedModels;
 
 namespace Portfolio.Core.Components
 {
@@ -11,7 +12,7 @@ namespace Portfolio.Core.Components
     {
         public IViewComponentResult Invoke(IPublishedContent model)
         {
-            var homePage = model.AncestorOrSelf<Models.Home>();
+            var homePage = model.AncestorOrSelf<Home>();
             var pages = homePage?.Children() ?? Enumerable.Empty<IPublishedContent>();
 
             var vm = new TopNavigationViewModel()

@@ -16,7 +16,7 @@ using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
 
-namespace Portfolio.Core.Models
+namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	// Mixin Content Type with alias "visibilityControls"
 	/// <summary>Visibility Controls</summary>

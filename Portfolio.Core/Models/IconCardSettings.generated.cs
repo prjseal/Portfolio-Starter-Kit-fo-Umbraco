@@ -16,7 +16,7 @@ using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
 
-namespace Portfolio.Core.Models
+namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Icon Card Settings</summary>
 	[PublishedModel("iconCardSettings")]
@@ -54,13 +54,13 @@ namespace Portfolio.Core.Models
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("hide")]
-		public virtual bool Hide => global::Portfolio.Core.Models.BlockVisibilitySettings.GetHide(this, _publishedValueFallback);
+		public virtual bool Hide => global::Umbraco.Cms.Web.Common.PublishedModels.BlockVisibilitySettings.GetHide(this, _publishedValueFallback);
 
 		///<summary>
 		/// Item Name: Enter a name for this item. This is just to help you organise the blocks in the list
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("itemName")]
-		public virtual string ItemName => global::Portfolio.Core.Models.ItemNameSettings.GetItemName(this, _publishedValueFallback);
+		public virtual string ItemName => global::Umbraco.Cms.Web.Common.PublishedModels.ItemNameSettings.GetItemName(this, _publishedValueFallback);
 	}
 }

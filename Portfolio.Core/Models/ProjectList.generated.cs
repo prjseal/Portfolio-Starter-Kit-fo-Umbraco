@@ -16,7 +16,7 @@ using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
 
-namespace Portfolio.Core.Models
+namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Project List</summary>
 	[PublishedModel("projectList")]
@@ -54,41 +54,41 @@ namespace Portfolio.Core.Models
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("title")]
-		public virtual string Title => global::Portfolio.Core.Models.MainHeaderControls.GetTitle(this, _publishedValueFallback);
+		public virtual string Title => global::Umbraco.Cms.Web.Common.PublishedModels.MainHeaderControls.GetTitle(this, _publishedValueFallback);
 
 		///<summary>
 		/// Canonical Url: Enter the canonical url for this page. If it is empty, the url of the page will be used instead.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("canonicalUrl")]
-		public virtual string CanonicalUrl => global::Portfolio.Core.Models.SEocontrols.GetCanonicalUrl(this, _publishedValueFallback);
+		public virtual string CanonicalUrl => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetCanonicalUrl(this, _publishedValueFallback);
 
 		///<summary>
 		/// Meta Description: Enter the meta description for the page. This is what will show in search engine results.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("metaDescription")]
-		public virtual string MetaDescription => global::Portfolio.Core.Models.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
+		public virtual string MetaDescription => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
 
 		///<summary>
 		/// Meta Title: Enter the title for the page. If this is blank, we will use page title. If that is blank we will use page name.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("metaTitle")]
-		public virtual string MetaTitle => global::Portfolio.Core.Models.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
+		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
 
 		///<summary>
 		/// Hide From Sitemap
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("hideFromSitemap")]
-		public virtual bool HideFromSitemap => global::Portfolio.Core.Models.VisibilityControls.GetHideFromSitemap(this, _publishedValueFallback);
+		public virtual bool HideFromSitemap => global::Umbraco.Cms.Web.Common.PublishedModels.VisibilityControls.GetHideFromSitemap(this, _publishedValueFallback);
 
 		///<summary>
 		/// Umbraco Navi Hide
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("umbracoNaviHide")]
-		public virtual bool UmbracoNaviHide => global::Portfolio.Core.Models.VisibilityControls.GetUmbracoNaviHide(this, _publishedValueFallback);
+		public virtual bool UmbracoNaviHide => global::Umbraco.Cms.Web.Common.PublishedModels.VisibilityControls.GetUmbracoNaviHide(this, _publishedValueFallback);
 	}
 }

@@ -16,7 +16,7 @@ using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
 
-namespace Portfolio.Core.Models
+namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>CV</summary>
 	[PublishedModel("cV")]
@@ -54,104 +54,104 @@ namespace Portfolio.Core.Models
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("canonicalUrl")]
-		public virtual string CanonicalUrl => global::Portfolio.Core.Models.SEocontrols.GetCanonicalUrl(this, _publishedValueFallback);
+		public virtual string CanonicalUrl => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetCanonicalUrl(this, _publishedValueFallback);
 
 		///<summary>
 		/// Meta Description: Enter the meta description for the page. This is what will show in search engine results.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("metaDescription")]
-		public virtual string MetaDescription => global::Portfolio.Core.Models.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
+		public virtual string MetaDescription => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
 
 		///<summary>
 		/// Meta Title: Enter the title for the page. If this is blank, we will use page title. If that is blank we will use page name.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("metaTitle")]
-		public virtual string MetaTitle => global::Portfolio.Core.Models.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
+		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
 
 		///<summary>
 		/// Hide From Sitemap
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("hideFromSitemap")]
-		public virtual bool HideFromSitemap => global::Portfolio.Core.Models.VisibilityControls.GetHideFromSitemap(this, _publishedValueFallback);
+		public virtual bool HideFromSitemap => global::Umbraco.Cms.Web.Common.PublishedModels.VisibilityControls.GetHideFromSitemap(this, _publishedValueFallback);
 
 		///<summary>
 		/// Umbraco Navi Hide
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("umbracoNaviHide")]
-		public virtual bool UmbracoNaviHide => global::Portfolio.Core.Models.VisibilityControls.GetUmbracoNaviHide(this, _publishedValueFallback);
+		public virtual bool UmbracoNaviHide => global::Umbraco.Cms.Web.Common.PublishedModels.VisibilityControls.GetUmbracoNaviHide(this, _publishedValueFallback);
 
 		///<summary>
 		/// Contact Info: Enter the contact info
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("contactInfo")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement> ContactInfo => global::Portfolio.Core.Models.WorkHistoryControls.GetContactInfo(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement> ContactInfo => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetContactInfo(this, _publishedValueFallback);
 
 		///<summary>
 		/// Contact Info Title: Enter the title for the contact info section
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("contactInfoTitle")]
-		public virtual string ContactInfoTitle => global::Portfolio.Core.Models.WorkHistoryControls.GetContactInfoTitle(this, _publishedValueFallback);
+		public virtual string ContactInfoTitle => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetContactInfoTitle(this, _publishedValueFallback);
 
 		///<summary>
 		/// Education History: Enter the details of your education
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("educationHistory")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Portfolio.Core.Models.HistoryItem> EducationHistory => global::Portfolio.Core.Models.WorkHistoryControls.GetEducationHistory(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.HistoryItem> EducationHistory => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetEducationHistory(this, _publishedValueFallback);
 
 		///<summary>
 		/// Education History Title: Enter the title for the education history section
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("educationHistoryTitle")]
-		public virtual string EducationHistoryTitle => global::Portfolio.Core.Models.WorkHistoryControls.GetEducationHistoryTitle(this, _publishedValueFallback);
+		public virtual string EducationHistoryTitle => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetEducationHistoryTitle(this, _publishedValueFallback);
 
 		///<summary>
 		/// Hobbies: Enter the content for the hobbies section
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("hobbies")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Hobbies => global::Portfolio.Core.Models.WorkHistoryControls.GetHobbies(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Hobbies => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetHobbies(this, _publishedValueFallback);
 
 		///<summary>
 		/// Hobbies Title: Enter a title for the hobbies section
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("hobbiesTitle")]
-		public virtual string HobbiesTitle => global::Portfolio.Core.Models.WorkHistoryControls.GetHobbiesTitle(this, _publishedValueFallback);
+		public virtual string HobbiesTitle => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetHobbiesTitle(this, _publishedValueFallback);
 
 		///<summary>
 		/// Skills: Enter your skills and ratings
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("skills")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Portfolio.Core.Models.SkillItem> Skills => global::Portfolio.Core.Models.WorkHistoryControls.GetSkills(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.SkillItem> Skills => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetSkills(this, _publishedValueFallback);
 
 		///<summary>
 		/// Skills Title: Enter the title for the skills section
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("skillsTitle")]
-		public virtual string SkillsTitle => global::Portfolio.Core.Models.WorkHistoryControls.GetSkillsTitle(this, _publishedValueFallback);
+		public virtual string SkillsTitle => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetSkillsTitle(this, _publishedValueFallback);
 
 		///<summary>
 		/// Work History
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("workHistory")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Portfolio.Core.Models.HistoryItem> WorkHistory => global::Portfolio.Core.Models.WorkHistoryControls.GetWorkHistory(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.HistoryItem> WorkHistory => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetWorkHistory(this, _publishedValueFallback);
 
 		///<summary>
 		/// Work History Title: Enter the title for the work history section
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("workHistoryTitle")]
-		public virtual string WorkHistoryTitle => global::Portfolio.Core.Models.WorkHistoryControls.GetWorkHistoryTitle(this, _publishedValueFallback);
+		public virtual string WorkHistoryTitle => global::Umbraco.Cms.Web.Common.PublishedModels.WorkHistoryControls.GetWorkHistoryTitle(this, _publishedValueFallback);
 	}
 }

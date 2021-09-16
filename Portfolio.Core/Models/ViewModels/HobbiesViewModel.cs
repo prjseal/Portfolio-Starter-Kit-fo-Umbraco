@@ -1,4 +1,5 @@
 ﻿using Umbraco.Cms.Core.Strings;
+using Umbraco.Cms.Web.Common.PublishedModels;
 
 namespace Portfolio.Core.Models.ViewModels
 {

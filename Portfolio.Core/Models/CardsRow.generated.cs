@@ -16,7 +16,7 @@ using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
 
-namespace Portfolio.Core.Models
+namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Cards Row</summary>
 	[PublishedModel("cardsRow")]
@@ -62,6 +62,6 @@ namespace Portfolio.Core.Models
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("title")]
-		public virtual string Title => global::Portfolio.Core.Models.BlockTitleControls.GetTitle(this, _publishedValueFallback);
+		public virtual string Title => global::Umbraco.Cms.Web.Common.PublishedModels.BlockTitleControls.GetTitle(this, _publishedValueFallback);
 	}
 }
