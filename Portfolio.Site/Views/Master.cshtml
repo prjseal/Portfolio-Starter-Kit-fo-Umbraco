@@ -8,10 +8,9 @@
 <html lang="@UmbracoContext.PublishedRequest.Culture">
 
 <head>
-    @Html.Partial("metaData", (IPublishedContent)Model)
-    <link rel="stylesheet preload" as="style" href="/assets/bootstrap/css/bootstrap.min.css">
-    @*<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap">*@
-    <link rel="stylesheet preload" as="style" href="/assets/fonts/ionicons.min.css">
+    @Html.Partial("metaData")
+    <link rel="stylesheet preload" as="style" href="@Url.Content("~/assets/bootstrap/css/bootstrap.min.css")">
+    <link rel="stylesheet preload" as="style" href="@Url.Content("~/assets/fonts/ionicons.min.css")">
 </head>
 
 <body>
@@ -21,8 +20,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
             integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
             crossorigin="anonymous"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/assets/js/theme.js"></script>
+    <script src="@Url.Content("/assets/bootstrap/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/assets/js/theme.js")"></script>
 </body>
 
 </html>
