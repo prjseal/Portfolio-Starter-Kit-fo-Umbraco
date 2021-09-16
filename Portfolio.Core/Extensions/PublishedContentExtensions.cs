@@ -19,5 +19,45 @@ namespace Portfolio.Core.Extensions
 
             return "";
         }
+
+        public static string GetMetaTitle(this IPublishedContent content)
+        {
+            if (content != null && content.HasProperty("metaTitle") && content.HasValue("metaTitle"))
+            {
+                return content.Value<string>("metaTitle");
+            }
+
+            return GetPageTitle(content);
+        }
+
+        public static string GetPageTitle(this IPublishedContent content)
+        {
+            if (content != null && content.HasProperty("pageTitle") && content.HasValue("pageTitle"))
+            {
+                return content.Value<string>("pageTitle");
+            }
+
+            return content.Name;
+        }
+
+        public static string GetMetaDescription(this IPublishedContent content)
+        {
+            if (content != null && content.HasProperty("metaDescription") && content.HasValue("metaDescription"))
+            {
+                return content.Value<string>("metaDescription");
+            }
+
+            return "";
+        }
+
+        public static string GetCanonicalUrl(this IPublishedContent content)
+        {
+            if (content != null && content.HasProperty("canonicalUrl") && content.HasValue("canonicalUrl"))
+            {
+                return content.Value<string>("canonicalUrl");
+            }
+
+            return content.Url(mode: UrlMode.Absolute);
+        }
     }
 }

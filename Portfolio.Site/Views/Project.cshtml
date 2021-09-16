@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Project>
 
+@using Portfolio.Core.Extensions
+
 @{
     Layout = "Master.cshtml";
     var projectList = Model.Parent;
@@ -11,7 +13,7 @@
     <section class="portfolio-block project">
         <div class="container">
             <div class="heading">
-                <h2>@title</h2>
+                <h1 class="font-weight-bold text-uppercase">@title</h1>
             </div>
             <div class="image" style="background-image:url('@Model.MainImage.GetCropUrl("Page Header")');"></div>
             <div class="row">
@@ -21,9 +23,6 @@
                 </div>
                 <div class="col-12 col-md-3 offset-md-1 meta">
                     <div class="tags">
-                        <span class="meta-heading">Tags</span>
-                        <a href="#">Resource</a>
-                        <a href="#">Project</a>
                         @if (Model.ProjectDate != null && Model.ProjectDate > DateTime.MinValue)
                         {
                             <span class="meta-heading">Date</span>
@@ -40,8 +39,9 @@
                     <div class="row gallery">
                         @foreach (var project in otherProjects)
                         {
+                            var projectContentItem = (IPublishedContent)project;
                             <div class="col-md-4 col-lg-3 mx-auto">
-                                <div class="item"><a href="@project.Url()"><img class="img-fluid scale-on-hover" src="@project.MainImage.GetCropUrl("Project Preview")"></a></div>
+                                <div class="item"><a href="@project.Url()" title="@projectContentItem.GetPageTitle()"><img class="img-fluid scale-on-hover" src="@project.MainImage.GetCropUrl("Project Preview Medium")"></a></div>
                             </div>
                         }
                     </div>

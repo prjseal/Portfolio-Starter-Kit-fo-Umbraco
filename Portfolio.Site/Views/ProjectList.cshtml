@@ -1,5 +1,6 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ProjectList>
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ProjectList>
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Portfolio.Core.Extensions
 
 @{
     Layout = "Master.cshtml";
@@ -9,7 +10,7 @@
 <main class="page projets-page">
     <section class="portfolio-block projects compact-grid">
         <div class="heading">
-            <h2>@Model.Title</h2>
+            <h1 class="text-uppercase font-weight-bold">@Model.Title</h1>
         </div>
         @if (projects != null && projects.Any())
         {
@@ -18,10 +19,10 @@
                 {
                     <div class="col-md-6 col-lg-4 item zoom-on-hover">
                         <a href="@project.Url()">
-                            <img class="img-fluid image" src="@project.MainImage.Url()">
+                            <img class="img-fluid image" src="@project.MainImage.GetCropUrl("Project Preview Large")" alt="@project.MainImage.GetAltText()">
                             <span class="description">
                                 <span class="description-heading">@project.Name</span>
-                                <span class="description-body">@project.Description</span>
+                                <span class="description-body">@project.MetaDescription</span>
                             </span>
                         </a>
                     </div>

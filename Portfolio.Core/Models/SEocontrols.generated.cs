@@ -18,14 +18,34 @@ using Umbraco.Extensions;
 
 namespace Portfolio.Core.Models
 {
-	/// <summary>Contact</summary>
-	[PublishedModel("contact")]
-	public partial class Contact : PublishedContentModel, IMainContentProperties, IMainHeaderControls, ISEocontrols, IVisibilityControls
+	// Mixin Content Type with alias "sEOControls"
+	/// <summary>SEO Controls</summary>
+	public partial interface ISEocontrols : IPublishedContent
+	{
+		/// <summary>Canonical Url</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string CanonicalUrl { get; }
+
+		/// <summary>Meta Description</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string MetaDescription { get; }
+
+		/// <summary>Meta Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string MetaTitle { get; }
+	}
+
+	/// <summary>SEO Controls</summary>
+	[PublishedModel("sEOControls")]
+	public partial class SEocontrols : PublishedContentModel, ISEocontrols
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
-		public new const string ModelTypeAlias = "contact";
+		public new const string ModelTypeAlias = "sEOControls";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
@@ -34,14 +54,14 @@ namespace Portfolio.Core.Models
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<Contact, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<SEocontrols, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public Contact(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public SEocontrols(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,52 +70,42 @@ namespace Portfolio.Core.Models
 		// properties
 
 		///<summary>
-		/// Main Content: Add the different content rows using the block list editor
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
-		[ImplementPropertyType("mainContent")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel MainContent => global::Portfolio.Core.Models.MainContentProperties.GetMainContent(this, _publishedValueFallback);
-
-		///<summary>
-		/// Title: Enter a title for this page. If this is left blank, the name of the page will be used.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
-		[ImplementPropertyType("title")]
-		public virtual string Title => global::Portfolio.Core.Models.MainHeaderControls.GetTitle(this, _publishedValueFallback);
-
-		///<summary>
 		/// Canonical Url: Enter the canonical url for this page. If it is empty, the url of the page will be used instead.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("canonicalUrl")]
-		public virtual string CanonicalUrl => global::Portfolio.Core.Models.SEocontrols.GetCanonicalUrl(this, _publishedValueFallback);
+		public virtual string CanonicalUrl => GetCanonicalUrl(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Canonical Url</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetCanonicalUrl(ISEocontrols that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "canonicalUrl");
 
 		///<summary>
 		/// Meta Description: Enter the meta description for the page. This is what will show in search engine results.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("metaDescription")]
-		public virtual string MetaDescription => global::Portfolio.Core.Models.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
+		public virtual string MetaDescription => GetMetaDescription(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Meta Description</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetMetaDescription(ISEocontrols that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "metaDescription");
 
 		///<summary>
 		/// Meta Title: Enter the title for the page. If this is blank, we will use page title. If that is blank we will use page name.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("metaTitle")]
-		public virtual string MetaTitle => global::Portfolio.Core.Models.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
+		public virtual string MetaTitle => GetMetaTitle(this, _publishedValueFallback);
 
-		///<summary>
-		/// Hide From Sitemap
-		///</summary>
+		/// <summary>Static getter for Meta Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
-		[ImplementPropertyType("hideFromSitemap")]
-		public virtual bool HideFromSitemap => global::Portfolio.Core.Models.VisibilityControls.GetHideFromSitemap(this, _publishedValueFallback);
-
-		///<summary>
-		/// Umbraco Navi Hide
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
-		[ImplementPropertyType("umbracoNaviHide")]
-		public virtual bool UmbracoNaviHide => global::Portfolio.Core.Models.VisibilityControls.GetUmbracoNaviHide(this, _publishedValueFallback);
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetMetaTitle(ISEocontrols that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "metaTitle");
 	}
 }

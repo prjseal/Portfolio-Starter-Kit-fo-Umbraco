@@ -9,8 +9,8 @@
                 @foreach (var project in Model)
                 {
                     <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                        <a href="@project.Url()">
-                            <img class="img-fluid image" src="@project.MainImage.GetCropUrl("Project Preview")" alt="@project.MainImage.GetAltText()">
+                        <a href="@project.Url()" title="@project.GetPageTitle()">
+                            <img class="img-fluid image" src="@project.MainImage.GetCropUrl("Project Preview Medium")" alt="@project.MainImage.GetAltText()">
                         </a>
                     </div>
                 }

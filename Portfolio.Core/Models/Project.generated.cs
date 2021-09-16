@@ -20,7 +20,7 @@ namespace Portfolio.Core.Models
 {
 	/// <summary>Project</summary>
 	[PublishedModel("project")]
-	public partial class Project : PublishedContentModel, IMainHeaderControls, IMainImageSettings, IProjectControls, IVisibilityControls
+	public partial class Project : PublishedContentModel, IMainHeaderControls, IMainImageSettings, IProjectControls, ISEocontrols, IVisibilityControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -76,6 +76,27 @@ namespace Portfolio.Core.Models
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("projectDate")]
 		public virtual global::System.DateTime ProjectDate => global::Portfolio.Core.Models.ProjectControls.GetProjectDate(this, _publishedValueFallback);
+
+		///<summary>
+		/// Canonical Url: Enter the canonical url for this page. If it is empty, the url of the page will be used instead.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[ImplementPropertyType("canonicalUrl")]
+		public virtual string CanonicalUrl => global::Portfolio.Core.Models.SEocontrols.GetCanonicalUrl(this, _publishedValueFallback);
+
+		///<summary>
+		/// Meta Description: Enter the meta description for the page. This is what will show in search engine results.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[ImplementPropertyType("metaDescription")]
+		public virtual string MetaDescription => global::Portfolio.Core.Models.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
+
+		///<summary>
+		/// Meta Title: Enter the title for the page. If this is blank, we will use page title. If that is blank we will use page name.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[ImplementPropertyType("metaTitle")]
+		public virtual string MetaTitle => global::Portfolio.Core.Models.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
 
 		///<summary>
 		/// Hide From Sitemap

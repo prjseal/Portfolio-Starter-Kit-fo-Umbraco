@@ -50,6 +50,14 @@ namespace Portfolio.Core.Models
 		// properties
 
 		///<summary>
+		/// Alt Text: Enter the alt text for this image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("altText")]
+		public virtual string AltText => this.Value<string>(_publishedValueFallback, "altText");
+
+		///<summary>
 		/// Size: in bytes
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
