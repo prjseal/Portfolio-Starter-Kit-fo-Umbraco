@@ -25,7 +25,7 @@
                         @if (item is ContentModels.IconLinkItem)
                         {
                             var linkItem = item as ContentModels.IconLinkItem;
-                            <a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target" rel="noopener" title="@linkItem.Link.Name"><i class="icon @(item.Value<string>("icon").ToIconClass())"></i></a>
+                            <a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target" rel="noopener" title="@linkItem.Link.Name" class="bg-primary"><i class="icon @(item.Value<string>("icon").ToIconClass())"></i></a>
                         }
                     }
                 </div>
