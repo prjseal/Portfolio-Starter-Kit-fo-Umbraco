@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IFooterControls, IMainContentProperties, IProfileControls, ISEocontrols
+	public partial class Home : PublishedContentModel, IFooterControls, IMainContentProperties, IProfileControls, ISEocontrols, ISiteNameControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -111,5 +111,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
 		[ImplementPropertyType("metaTitle")]
 		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// Site Name: Enter a name for the website, it could be your name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc003+36582f2cd2c6ddc797c85dac0a9a6572126bf602")]
+		[ImplementPropertyType("siteName")]
+		public virtual string SiteName => global::Umbraco.Cms.Web.Common.PublishedModels.SiteNameControls.GetSiteName(this, _publishedValueFallback);
 	}
 }

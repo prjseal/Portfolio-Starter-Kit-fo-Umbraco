@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-primary portfolio-navbar">
     <div class="container">
-        <a class="navbar-brand logo" href="@Model.HomePage.Url()">Portfolio</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <a class="navbar-brand logo" href="@Model.HomePage.Url()">@Model.SiteName</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarNav">
             @if(Model.NavigationItems != null && Model.NavigationItems.Any())
             {

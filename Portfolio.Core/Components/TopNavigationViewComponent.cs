@@ -18,7 +18,8 @@ namespace Portfolio.Core.Components
             var vm = new TopNavigationViewModel()
             {
                 HomePage = homePage,
-                NavigationItems = pages
+                NavigationItems = pages,
+                SiteName = homePage.SiteName ?? "Portfolio"
             };
 
             return View(vm);
