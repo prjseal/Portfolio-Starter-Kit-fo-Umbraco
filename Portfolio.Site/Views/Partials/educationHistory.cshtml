@@ -1,15 +1,15 @@
-@inherits UmbracoViewPage<WorkHistoryViewModel>
+@inherits UmbracoViewPage<ContentModels.IWorkHistoryControls>
 
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
 
 
-<div class="work-experience group">
+<div class="education group">
     <div class="heading">
-        <h2 class="text-center">@Model.WorkHistoryControls.WorkHistoryTitle</h2>
+        <h2 class="text-center">@Model.EducationHistoryTitle</h2>
     </div>
-    @if (Model.WorkHistoryControls.WorkHistory != null && Model.WorkHistoryControls.WorkHistory.Any())
+    @if (Model.EducationHistory != null && Model.EducationHistory.Any())
     {
-        foreach (var item in Model.WorkHistoryControls.WorkHistory)
+        foreach (var item in Model.EducationHistory)
         {
             <div class="item">
                 <div class="row">

@@ -1,5 +1,6 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.CV>
-@using Portfolio.Core.Models.ViewModels
+
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
 
 @{
     Layout = "Master.cshtml";
@@ -7,22 +8,22 @@
 }
 
 <main class="page cv-page">
-    @(await Component.InvokeAsync("AvatarHeader", new { profileControls = homePage, borderBottom = false } ))
+    @await Html.PartialAsync("avatarHeader", homePage)
     <section class="portfolio-block cv">
         <div class="container">
-            @await Component.InvokeAsync("WorkHistory", Model)
-            @await Component.InvokeAsync("EducationHistory", Model)
+            @await Html.PartialAsync("workHistory", Model)
+            @await Html.PartialAsync("educationHistory", Model)
             <div class="group">
                 <div class="row">
                     <div class="col-md-6">
-                        @await Component.InvokeAsync("Skills", Model)
+                        @await Html.PartialAsync("skills", Model)
                     </div>
                     <div class="col-md-6">
-                        @await Component.InvokeAsync("ContactInfo", Model)
+                        @await Html.PartialAsync("contactInfo", Model)
                     </div>
                 </div>
             </div>
-            @(await Component.InvokeAsync("Hobbies", Model))
+            @await Html.PartialAsync("hobbies", Model)
         </div>
     </section>
 </main>

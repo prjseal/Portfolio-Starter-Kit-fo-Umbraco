@@ -1,4 +1,6 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+
 @{
     Layout = null;
     var homePage = Model.AncestorOrSelf<ContentModels.Home>();
@@ -8,20 +10,20 @@
 <html lang="@UmbracoContext.PublishedRequest.Culture">
 
 <head>
-    @Html.Partial("metaData")
-    <link rel="stylesheet preload" as="style" href="@Url.Content("~/assets/bootstrap/css/bootstrap.min.css")">
-    <link rel="stylesheet preload" as="style" href="@Url.Content("~/assets/fonts/ionicons.min.css")">
+    @await Html.PartialAsync("metaData")
+    <link rel="stylesheet preload" as="style" href="@Url.Content("~/portfolio-assets/bootstrap.min.css")">
+    <link rel="stylesheet preload" as="style" href="@Url.Content("~/portfolio-assets/ionicons.min.css")">
 </head>
 
 <body>
-    @(await Component.InvokeAsync("TopNavigation", Model))
+    @await Html.PartialAsync("topNavigation", homePage)
     @RenderBody()
-    @(await Component.InvokeAsync("Footer", homePage))
+    @await Html.PartialAsync("footer", homePage)
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
             integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
             crossorigin="anonymous"></script>
-    <script src="@Url.Content("/assets/bootstrap/js/bootstrap.min.js")"></script>
-    <script src="@Url.Content("~/assets/js/theme.js")"></script>
+    <script src="@Url.Content("/portfolio-assets/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/portfolio-assets/theme.js")"></script>
 </body>
 
 </html>

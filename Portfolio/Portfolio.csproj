@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionSuffix>rc-003</VersionSuffix>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Paul Seal</Authors>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>Portfolio</Product>
+    <PackageId>Portfolio</PackageId>
+    <Title>Portfolio</Title>
+    <Description>Portfolio Starter Kit for Umbraco</Description>
+    <PackageProjectUrl>https://github.com/prjseal/Portfolio-Starter-Kit-fo-Umbraco</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageIconUrl>https://github.com/prjseal/Portfolio-Starter-Kit-fo-Umbraco/blob/master/images/logo.png?raw=true</PackageIconUrl>
+    <RepositoryUrl>https://github.com/prjseal/Portfolio-Starter-Kit-fo-Umbraco</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="build\**\*.*">
+      <Pack>True</Pack>
+      <PackagePath>buildTransitive</PackagePath>
+    </None>
+
+    <Content Include="..\Portfolio.Site\wwwroot\assets\**\*.*">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    
+    <None Remove="Migrations\package.zip" />
+
+    <EmbeddedResource Include="Migrations\package.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0-rc003" />
+    <PackageReference Include="Portfolio.Core" Version="1.0.0-rc-003" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../images/logo.png" Pack="true" PackPath="\" />
+  </ItemGroup>
+
+</Project>

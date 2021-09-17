@@ -59,5 +59,16 @@ namespace Portfolio.Core.Extensions
 
             return content.Url(mode: UrlMode.Absolute);
         }
+
+        public static string GetSiteName(this IPublishedContent content)
+        {
+            var homePage = content.AncestorOrSelf("home");
+            if (homePage != null && homePage.HasProperty("siteName") && homePage.HasValue("siteName"))
+            {
+                return homePage.Value<string>("siteName");
+            }
+
+            return "Portfolio";
+        }
     }
 }

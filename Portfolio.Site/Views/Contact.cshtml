@@ -3,6 +3,7 @@
 @using Portfolio.Core.Models.ViewModels
 @using Portfolio.Core.Controllers.Surface
 @using Portfolio.Core.Extensions
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
 
 @{
     Layout = "Master.cshtml";
@@ -24,14 +25,18 @@
 
             @if (submitted)
             {
-                if (success)
-                {
-                    <p class="text-center">@Model.ThankYouMessage</p>
-                }
-                else
-                {
-                    <p class="text-center">@Model.ErrorMessage</p>
-                }
+                <div class="row">
+                    <div class="col-12 text-center">
+                        @if (success)
+                        {
+                            <p>@Model.ThankYouMessage</p>
+                        }
+                        else
+                        {
+                            <p>@Model.ErrorMessage</p>
+                        }
+                    </div>
+                </div>
             }
             else
             {

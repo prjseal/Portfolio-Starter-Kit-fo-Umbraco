@@ -1,9 +1,7 @@
-@inherits UmbracoViewPage<AvatarHeaderViewModel>
+@inherits UmbracoViewPage<ContentModels.IProfileControls>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
 
-
-
-<section class="portfolio-block block-intro @(Model.BorderBottom ? "border-bottom" : null)">
+<section class="portfolio-block block-intro">
     <div class="container">
         @if (Model.Avatar != null)
         {

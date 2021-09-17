@@ -1,17 +1,17 @@
-@inherits UmbracoViewPage<ContactInfoViewModel>
+@inherits UmbracoViewPage<ContentModels.IWorkHistoryControls>
 
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
 
 @using Portfolio.Core.Extensions
 
 <div class="contact-info portfolio-info-card">
-    @if (!string.IsNullOrWhiteSpace(Model?.ContactInfoControls?.ContactInfoTitle ?? ""))
+    @if (!string.IsNullOrWhiteSpace(Model?.ContactInfoTitle ?? ""))
     {
-        <h2>@Model.ContactInfoControls.ContactInfoTitle</h2>
+        <h2>@Model.ContactInfoTitle</h2>
     }
-    @if (Model.ContactInfoControls.ContactInfo != null && Model.ContactInfoControls.ContactInfo.Any())
+    @if (Model.ContactInfo != null && Model.ContactInfo.Any())
     {
-        foreach (var item in Model.ContactInfoControls.ContactInfo)
+        foreach (var item in Model.ContactInfo)
         {
             <div class="row">
                 <div class="col-1"><i class="icon @(item.Value<string>("icon").ToIconClass())"></i></div>

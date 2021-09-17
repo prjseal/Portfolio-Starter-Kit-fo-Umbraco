@@ -8,3 +8,5 @@
 *.user
 /Portfolio.Models/bin/Debug/net5.0
 /Portfolio.Models/obj
+/Portfolio/obj
+/Portfolio/bin/Debug
