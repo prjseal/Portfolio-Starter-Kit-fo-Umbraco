@@ -21,7 +21,7 @@ namespace Portfolio.Migrations
 
         protected override void Migrate()
         {
-            var contentHome = _contentService.GetRootContent().FirstOrDefault(x => x.ContentType.Alias == "homePage");
+            var contentHome = _contentService.GetRootContent().FirstOrDefault(x => x.ContentType.Alias == "home");
             if (contentHome != null)
             {
                 _contentService.SaveAndPublishBranch(contentHome, true);

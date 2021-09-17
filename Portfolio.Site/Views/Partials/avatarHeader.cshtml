@@ -5,7 +5,7 @@
     <div class="container">
         @if (Model.Avatar != null)
         {
-            <div class="avatar" style="background-image:url('@(Model.Avatar.GetCropUrl("Avatar"))');"></div>
+            <div class="avatar" style="background-image:url('@(Model.Avatar.GetCropUrl(width: 150, height: 150))');"></div>
         }
         <div class="about-me">
             @Model.AboutMe

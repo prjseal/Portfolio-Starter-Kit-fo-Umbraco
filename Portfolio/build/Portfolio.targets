@@ -1,14 +1,14 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <PortfolioAssetsFilePath>$(MSBuildThisFileDirectory)..\..\wwwroot\portfolio-assets\**\*.*</PortfolioAssetsFilePath>
+    <PortfolioAssetsFilePath>$(MSBuildThisFileDirectory)..\wwwroot\portfolio-assets\**\*.*</PortfolioAssetsFilePath>
   </PropertyGroup>
 
   <Target Name="CopyPortfolioAssets" BeforeTargets="Build">
     <ItemGroup>
       <PortfolioAssetFiles Include="$(PortfolioAssetsFilePath)" />
     </ItemGroup>
-    <Message Text="Copying Portfolio App_Plugins files: $(PortfolioAssetFilesPath) - #@(PortfolioAssetFiles->Count()) files"  Importance="high" />
+    <Message Text="Copying Portfolio Asset files: $(PortfolioAssetFilesPath) - #@(PortfolioAssetFiles->Count()) files"  Importance="high" />
     <Copy
         SourceFiles="@(PortfolioAssetFiles)"
         DestinationFiles="@(PortfolioAssetFiles->'$(MSBuildProjectDirectory)\wwwroot\portfolio-assets\%(RecursiveDir)%(Filename)%(Extension)')"
