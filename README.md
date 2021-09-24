@@ -14,13 +14,14 @@ Make sure you have downloaded the latest [.NET 5 SDK](https://dotnet.microsoft.c
 dotnet new -i Umbraco.Templates::9.0.0-rc004
 
 # Create solution/project
-dotnet new sln
-dotnet new umbraco -n PortfolioStarterKit --friendly-name "Admin User" --email "admin@admin.com" --password "1234567890" --connection-string "Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Umbraco.mdf;Integrated Security=True"
-dotnet sln add PortfolioStarterKit
-dotnet add PortfolioStarterKit package Portfolio --prerelease
+dotnet new sln --name MySolution
+dotnet new umbraco -n MyProject --friendly-name "Admin User" --email "admin@admin.com" --password "1234567890" --connection-string "Data Source=|DataDirectory|\Umbraco.sdf;Flush Interval=1" -ce
+dotnet sln add MyProject
+dotnet add MyProject package Portfolio --prerelease
 
 # Run
-dotnet run --project PortfolioStarterKit
+dotnet run --project MyProject
+
 ```
 
 When I originally built this, I was using the new ViewComponents which are part of .NET 5 but I was unable to include them in the starter kit due to the models needing to be altered by the end user and my core project can't know about the models up front.
