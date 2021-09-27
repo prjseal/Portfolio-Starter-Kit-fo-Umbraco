@@ -24,6 +24,30 @@ dotnet run --project MyProject
 
 ```
 
+To get the block list to hide the rows which are set to hide you need to update the partial view in `\views\partials\blocklist\default.cshtml` file to this code:
+
+```cs
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListModel>
+@{
+    if (!Model.Any()) { return; }
+
+    var visibleBlocks = Model.Where(x =>
+                            x.Settings == null
+                            || !x.Settings.HasProperty("hide")
+                            || !x.Settings.HasValue("hide")
+                            || !x.Settings.Value<bool>("hide"));
+
+    if (!visibleBlocks.Any()) { return; }
+}
+@foreach (var block in visibleBlocks)
+{
+    if (block?.ContentUdi == null) { continue; }
+    var data = block.Content;
+
+    @await Html.PartialAsync("BlockList/Components/" + data.ContentType.Alias, block)
+}
+```
+
 When I originally built this, I was using the new ViewComponents which are part of .NET 5 but I was unable to include them in the starter kit due to the models needing to be altered by the end user and my core project can't know about the models up front.
 
 **In this starter kit you can see examples of:**
