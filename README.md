@@ -11,13 +11,13 @@ Make sure you have downloaded the latest [.NET 5 SDK](https://dotnet.microsoft.c
 
 ```
 # Ensure we have the latest Umbraco templates
-dotnet new -i Umbraco.Templates::9.0.0-rc004
+dotnet new -i Umbraco.Templates::9.0.0
 
 # Create solution/project
 dotnet new sln --name MySolution
 dotnet new umbraco -n MyProject --friendly-name "Admin User" --email "admin@admin.com" --password "1234567890" --connection-string "Data Source=|DataDirectory|\Umbraco.sdf;Flush Interval=1" -ce
 dotnet sln add MyProject
-dotnet add MyProject package Portfolio --prerelease
+dotnet add MyProject package Portfolio
 
 # Run
 dotnet run --project MyProject
