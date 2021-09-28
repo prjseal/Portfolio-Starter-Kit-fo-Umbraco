@@ -15,5 +15,5 @@
     if (block?.ContentUdi == null) { continue; }
     var data = block.Content;
 
-    @await Html.PartialAsync("BlockList/Components/" + data.ContentType.Alias, block)
+    @await Html.PartialAsync("blocklist/Components/" + data.ContentType.Alias, block)
 }
