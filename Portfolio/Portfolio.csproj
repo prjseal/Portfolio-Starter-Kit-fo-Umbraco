@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>test005</VersionSuffix>
-    <InformationalVersion>1.0.0</InformationalVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <Version>1.0.1</Version>
+    <InformationalVersion>1.0.1</InformationalVersion>
     <TargetFramework>net5.0</TargetFramework>
     <Authors>Paul Seal</Authors>
     <ContentTargetFolders>.</ContentTargetFolders>
@@ -30,6 +29,11 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>Always</CopyToPublishDirectory>
     </Content>
+
+    <Content Include="Views\**\*.*">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
     
     <None Remove="Migrations\package.zip" />
 
@@ -37,8 +41,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0-rc003" />
-    <PackageReference Include="Portfolio.Core" Version="1.0.0-test004" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0" />
+    <PackageReference Include="Portfolio.Core" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>

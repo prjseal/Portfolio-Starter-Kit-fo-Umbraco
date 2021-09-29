@@ -16,7 +16,10 @@
             <div class="heading">
                 <h1 class="font-weight-bold text-uppercase">@title</h1>
             </div>
-            <div class="image" style="background-image:url('@Model.MainImage.GetCropUrl(width: 1110, height: 450)');"></div>
+            @if (Model.MainImage != null)
+            {
+                <div class="image" style="background-image: url('@Model.MainImage.GetCropUrl(width: 1110, height: 450)');"></div>
+            }
             <div class="row">
                 <div class="col-12 col-md-6 offset-md-1 info">
                     <h3>Description</h3>
@@ -42,7 +45,14 @@
                         {
                             var projectContentItem = (IPublishedContent)project;
                             <div class="col-md-4 col-lg-3 mx-auto">
-                                <div class="item"><a href="@project.Url()" title="@projectContentItem.GetPageTitle()"><img class="img-fluid scale-on-hover" src="@project.MainImage.GetCropUrl(width: 663, height: 442)"></a></div>
+                                <div class="item">
+                                    <a href="@project.Url()" title="@projectContentItem.GetPageTitle()">
+                                        @if (project.MainImage != null)
+                                        {
+                                            <img class="img-fluid scale-on-hover" src="@project.MainImage.GetCropUrl(width: 663, height: 442)">
+                                        }
+                                    </a>
+                                </div>
                             </div>
                         }
                     </div>

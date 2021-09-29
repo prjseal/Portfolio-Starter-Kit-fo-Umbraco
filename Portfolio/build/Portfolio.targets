@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <PortfolioAssetsFilePath>$(MSBuildThisFileDirectory)..\wwwroot\portfolio-assets\**\*.*</PortfolioAssetsFilePath>
+    <PortfolioViewsFilePath>$(MSBuildThisFileDirectory)..\Views\**\*.*</PortfolioViewsFilePath>
   </PropertyGroup>
 
   <Target Name="CopyPortfolioAssets" BeforeTargets="Build">
@@ -13,6 +14,17 @@
         SourceFiles="@(PortfolioAssetFiles)"
         DestinationFiles="@(PortfolioAssetFiles->'$(MSBuildProjectDirectory)\wwwroot\portfolio-assets\%(RecursiveDir)%(Filename)%(Extension)')"
         SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyPortfolioViews" BeforeTargets="Build">
+    <ItemGroup>
+      <PortfolioViewsFiles Include="$(PortfolioViewsFilePath)" />
+    </ItemGroup>
+    <Message Text="Copying Portfolio Views files: $(PortfolioViewsFilesPath) - #@(PortfolioViewsFiles->Count()) files"  Importance="high" />
+    <Copy
+      SourceFiles="@(PortfolioViewsFiles)"
+      DestinationFiles="@(PortfolioViewsFiles->'$(MSBuildProjectDirectory)\Views\%(RecursiveDir)%(Filename)%(Extension)')"
+      SkipUnchangedFiles="true" />
   </Target>
 
 </Project>
