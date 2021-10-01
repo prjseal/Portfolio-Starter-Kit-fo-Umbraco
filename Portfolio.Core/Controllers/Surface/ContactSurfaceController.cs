@@ -1,8 +1,8 @@
-﻿using MailKit.Net.Smtp;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Portfolio.Core.Models.ViewModels;
+using System.Threading.Tasks;
 using Umbraco.Cms.Core.Cache;
 using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.Logging;
@@ -24,17 +24,17 @@ namespace Portfolio.Core.Controllers.Surface
         private readonly GlobalSettings _globalSettings;
 
         public ContactSurfaceController(
-            IUmbracoContextAccessor umbracoContextAccessor, 
-            IUmbracoDatabaseFactory databaseFactory, 
-            ServiceContext services, 
-            AppCaches appCaches, 
-            IProfilingLogger profilingLogger, 
-            IPublishedUrlProvider publishedUrlProvider, 
-            IEmailSender emailSender, 
-            ILogger<ContactSurfaceController> logger, 
+            IUmbracoContextAccessor umbracoContextAccessor,
+            IUmbracoDatabaseFactory databaseFactory,
+            ServiceContext services,
+            AppCaches appCaches,
+            IProfilingLogger profilingLogger,
+            IPublishedUrlProvider publishedUrlProvider,
+            IEmailSender emailSender,
+            ILogger<ContactSurfaceController> logger,
             IOptions<GlobalSettings> globalSettings)
-            : base(umbracoContextAccessor, databaseFactory, 
-                  services, appCaches, profilingLogger, 
+            : base(umbracoContextAccessor, databaseFactory,
+                  services, appCaches, profilingLogger,
                   publishedUrlProvider)
         {
             _emailSender = emailSender;
@@ -43,16 +43,16 @@ namespace Portfolio.Core.Controllers.Surface
         }
 
         [HttpPost]
-        public IActionResult SubmitForm(ContactViewModel model)
+        public async Task<IActionResult> SubmitForm(ContactViewModel model)
         {
             if (!ModelState.IsValid) return CurrentUmbracoPage();
 
-            TempData["Success"] = SendEmail(model);
+            TempData["Success"] = await SendEmail(model);
 
             return RedirectToCurrentUmbracoPage();
         }
 
-        public bool SendEmail(ContactViewModel model)
+        public async Task<bool> SendEmail(ContactViewModel model)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace Portfolio.Core.Controllers.Surface
 
                 var subject = string.Format("Enquiry from: {0} - {1}", model.Name, model.Email);
                 EmailMessage message = new EmailMessage(fromAddress, model.Email, subject, model.Message, false);
-                _emailSender.SendAsync(message, emailType: "Contact");
+                await _emailSender.SendAsync(message, emailType: "Contact");
 
                 _logger.LogInformation("Contact Form Submitted Successfully");
                 return true;
