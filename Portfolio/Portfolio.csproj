@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <Version>1.0.1</Version>
-    <InformationalVersion>1.0.1</InformationalVersion>
+    <AssemblyVersion>1.0.4</AssemblyVersion>
+    <Version>1.0.4</Version>
+    <InformationalVersion>1.0.4</InformationalVersion>
     <TargetFramework>net5.0</TargetFramework>
     <Authors>Paul Seal</Authors>
     <ContentTargetFolders>.</ContentTargetFolders>
@@ -41,8 +41,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0" />
-    <PackageReference Include="Portfolio.Core" Version="1.0.1" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.1" />
+    <PackageReference Include="Portfolio.Core" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>

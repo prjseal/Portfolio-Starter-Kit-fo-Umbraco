@@ -1,31 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <AssemblyVersion>1.0.1</AssemblyVersion>
-        <Version>1.0.1</Version>
-        <InformationalVersion>1.0.1</InformationalVersion>
-        <TargetFramework>net5.0</TargetFramework>
-        <Authors>Paul Seal</Authors>
-        <ContentTargetFolders>.</ContentTargetFolders>
-        <Product>Portfolio.Core</Product>
-        <PackageId>Portfolio.Core</PackageId>
-        <Title>Portfolio.Core</Title>
-        <Description>Core Library for the Portfolio Starter Kit for Umbraco</Description>
-        <PackageTags>umbraco plugin package starter kit portfolio core library</PackageTags>
-        <PackageProjectUrl>https://github.com/prjseal/Portfolio-Starter-Kit-fo-Umbraco</PackageProjectUrl>
-        <PackageIcon>logo.png</PackageIcon>
-        <PackageIconUrl>https://github.com/prjseal/Portfolio-Starter-Kit-fo-Umbraco/blob/master/images/logo.png?raw=true</PackageIconUrl>
-        <RepositoryUrl>https://github.com/prjseal/Portfolio-Starter-Kit-fo-Umbraco</RepositoryUrl>
-        <RepositoryType>Git</RepositoryType>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyVersion>1.0.4</AssemblyVersion>
+    <Version>1.0.4</Version>
+    <InformationalVersion>1.0.4</InformationalVersion>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Paul Seal</Authors>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>Portfolio.Core</Product>
+    <PackageId>Portfolio.Core</PackageId>
+    <Title>Portfolio.Core</Title>
+    <Description>Core Library for the Portfolio Starter Kit for Umbraco</Description>
+    <PackageTags>umbraco plugin package starter kit portfolio core library</PackageTags>
+    <PackageProjectUrl>https://github.com/prjseal/Portfolio-Starter-Kit-fo-Umbraco</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageIconUrl>https://github.com/prjseal/Portfolio-Starter-Kit-fo-Umbraco/blob/master/images/logo.png?raw=true</PackageIconUrl>
+    <RepositoryUrl>https://github.com/prjseal/Portfolio-Starter-Kit-fo-Umbraco</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.1" />
   </ItemGroup>
 
-    <ItemGroup>
-        <None Include="../images/logo.png" Pack="true" PackPath="\" />
-    </ItemGroup>
+  <ItemGroup>
+    <None Include="../images/logo.png" Pack="true" PackPath="\" />
+  </ItemGroup>
 
 </Project>
