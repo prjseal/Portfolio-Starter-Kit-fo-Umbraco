@@ -6,7 +6,7 @@ It gives you an alternative starter kit to use instead of the default starter ki
 
 It is supposed to be a Portfolio / CV site. 
 
-You can see it in action here. [https://umbraco9membership.azurewebsites.net/](https://umbraco9membership.azurewebsites.net/)
+You can see it in action here. [https://membership.codeshare.co.uk/](https://membership.codeshare.co.uk/)
 
 ## If you want a really quick way to get it installed and test it out
 Make sure you have downloaded the latest [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0), then copy and paste this into Command Prompt or Windows Terminal or whatever you use:
