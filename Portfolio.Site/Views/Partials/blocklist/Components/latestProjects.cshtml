@@ -1,0 +1,36 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+
+@using Umbraco.Cms.Web.Common.PublishedModels
+@using Portfolio.Core.Extensions
+
+@{
+    var homePage = Umbraco.AssignedContentItem.AncestorOrSelf<Home>();
+    var projectList = homePage != null ? homePage.Children<ProjectList>().FirstOrDefault() : null;
+    var projects = projectList != null ? projectList.Children<Project>().Where(x => x.IsVisible()) : Enumerable.Empty<Project>();
+}
+
+@if (projects != null && projects.Any())
+{
+    <section class="portfolio-block photography">
+        <div class="container">
+            <div class="row no-gutters">
+                @foreach (var project in projects)
+                {
+                    var projectTitle = ((IPublishedContent)project).GetPageTitle();
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                        <a href="@project.Url()" title="@projectTitle">
+                            @if (project.MainImage != null)
+                            {
+                                <img class="img-fluid image" width="663" height="442" src="@project.MainImage.GetCropUrl(width: 663, height: 442)" alt="@project.MainImage.GetAltText()">
+                            }
+                            else
+                            {
+                                @projectTitle;
+                            }
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+}
