@@ -1,0 +1,25 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.BlogArticle>
+
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+
+@{
+    Layout = "Master.cshtml";
+    var title = Model.Value<string>("title", fallback: Fallback.ToDefaultValue, defaultValue: Model.Name);
+}
+
+<main class="page lanidng-page">
+    <section class="portfolio-block project pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="heading w-100">
+                    <h1 class="font-weight-bold text-uppercase text-center w-100">@title</h1>
+                </div>
+                @if (Model.MainImage != null)
+                {
+                    <div class="image" style="background-image: url('@Model.MainImage.GetCropUrl(width: 1110, height: 450)');"></div>
+                }
+            </div>
+        </div>
+    </section>
+    @Html.GetBlockListHtml(Model.MainContent)
+</main>

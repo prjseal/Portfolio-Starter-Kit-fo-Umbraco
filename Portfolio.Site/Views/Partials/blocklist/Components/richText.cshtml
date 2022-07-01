@@ -1,0 +1,17 @@
+﻿@inherits UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+
+@using Umbraco.Cms.Web.Common.PublishedModels
+
+@{
+    var row = (RichText)Model.Content;
+}
+
+<section class="portfolio-block website">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @row.RichContent
+            </div>
+        </div>
+    </div>
+</section>
